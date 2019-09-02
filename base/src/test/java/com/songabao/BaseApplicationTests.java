@@ -91,4 +91,12 @@ public class BaseApplicationTests {
     public void isPrime(){
         System.out.println(BaseController.isPrime(5));
     }
+
+    /**
+     * 计算平方根
+     */
+    @Test
+    public void sqrt(){
+        System.out.println(BaseController.sqrt(5));
+    }
 }

@@ -37,6 +37,55 @@ public class BaseController {
         }
         return  true;
     }
+
+    /**
+     * 计算平方根（牛顿迭代法）
+     * @return
+     */
+    public static  double sqrt( double number){
+        if (number < 0){
+            return  Double.NaN;
+        }
+        double err = 0.001;
+        double t = number;
+        while (Math.abs(t-number/t) > err*t){
+            t = (number/t+t)/2.0;
+        }
+        return t;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private Integer gcd(Integer p, Integer q) {
         if (q == 0) {
             return p;
@@ -44,4 +93,6 @@ public class BaseController {
         int r = p % q;
         return gcd(p, r);
     }
+
+
 }
