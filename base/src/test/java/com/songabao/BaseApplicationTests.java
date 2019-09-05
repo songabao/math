@@ -1,11 +1,16 @@
 package com.songabao;
 
+
 import com.math.controller.ArrayController;
 import com.math.controller.BaseController;
+import com.math.controller.BinarySearchController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Random;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -43,7 +48,7 @@ public class BaseApplicationTests {
     @Test
     public void arrayMax() {
         int[] arr = {1,2,3,4,12,6,7,8,9,13};
-        ArrayController arrayController = new ArrayController();
+       ArrayController arrayController = new com.math.controller.ArrayController();
         System.out.println("数组最大值："+arrayController.arrayMax(arr));
     }
     /**
@@ -98,5 +103,37 @@ public class BaseApplicationTests {
     @Test
     public void sqrt(){
         System.out.println(BaseController.sqrt(5));
+    }
+
+    /**
+     * 求直角三角形斜边
+     */
+    @Test
+    public void hypotenuse(){
+       System.out.println(BaseController.hypotenuse(3,4));
+    }
+    /**
+     * 调和级数
+     */
+    @Test
+    public void harmoniceries(){
+        System.out.println(BaseController.harmoniceries(8));
+    }
+    /**
+     * 递归实现二分查找法
+     */
+    @Test
+    public void binarySearch()
+    {
+        int[] arr = {1,5,7,22,44,55,77,99,120};
+
+        System.out.println(BinarySearchController.binarySearch(120,arr,0,arr.length-1));
+    }
+    /**
+     * a和b之间的随机数
+     */
+    public void randomMath(){
+        Random random = new Random();
+        System.out.println(random.nextInt(100));
     }
 }

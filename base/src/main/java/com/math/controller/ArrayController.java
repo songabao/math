@@ -67,12 +67,12 @@ public class ArrayController {
     /**
      * 颠倒有序数组的顺序
      */
-    public String reverse(int[] arr){
-        for (int i = 0; i < arr.length/2; i++){
-                int temp = arr[i];
-                arr[i] = arr[arr.length-i-1];
-                arr[arr.length-i-1] = temp;
+    public String reverse(int[] arr) {
+        for (int i = 0; i < arr.length / 2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = temp;
         }
-        return  Arrays.toString(arr);
+        return Arrays.toString(arr);
     }
 }
